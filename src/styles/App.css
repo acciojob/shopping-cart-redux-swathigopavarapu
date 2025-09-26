@@ -6,6 +6,14 @@ body {
   padding: 0;
   color: #222;
 }
+.product-image {
+  width: 10%;
+  height: 150px;         /* adjust height as needed */
+  object-fit: cover;     /* ensures the image scales nicely */
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
 
 .app header {
   background: #2b6cb0;
