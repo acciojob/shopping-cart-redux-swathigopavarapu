@@ -1,1 +1,92 @@
 
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f7fb;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.app header {
+  background: #2b6cb0;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 320px;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: start;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(20,20,30,0.06);
+}
+
+.product-list,
+.cart-list,
+.wishlist-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.product:last-child { border-bottom: none; }
+
+.product-actions button,
+.cart-controls button,
+.coupon-form button,
+.wishlist-item button {
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.product-actions button.muted {
+  opacity: 0.6;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.cart-controls button { margin-left: 6px; }
+
+.summary {
+  margin-top: 1rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.total { font-size: 1.1rem; margin-top: 0.5rem; }
+
+.coupon-card input {
+  padding: 0.4rem;
+  width: 70%;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}

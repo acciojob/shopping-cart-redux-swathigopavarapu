@@ -1,13 +1,32 @@
-
 import React from "react";
-import './../styles/App.css';
+import ProductList from "./ProductList";
+import Cart from "./Cart";
+import Wishlist from "./Wishlist";
+import Coupon from "./Coupon";
 
 const App = () => {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
-}
+    <div className="app">
+      <header>
+        <h1>Shopping Cart</h1>
+      </header>
 
-export default App
+      <main className="main-grid">
+        <section className="left">
+          <ProductList />
+        </section>
+
+        <section className="center">
+          <Cart />
+          <Coupon />
+        </section>
+
+        <section className="right">
+          <Wishlist />
+        </section>
+      </main>
+    </div>
+  );
+};
+
+export default App;
